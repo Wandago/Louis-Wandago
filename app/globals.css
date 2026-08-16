@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-paper text-ink dark:bg-ink dark:text-paper transition-colors duration-200;
+}
+
+.prose-custom {
+  @apply prose prose-neutral dark:prose-invert max-w-none
+    prose-headings:font-serif prose-headings:font-semibold
+    prose-a:text-accent prose-a:no-underline hover:prose-a:underline
+    prose-code:before:content-none prose-code:after:content-none
+    prose-pre:bg-black/90 dark:prose-pre:bg-black;
+}
