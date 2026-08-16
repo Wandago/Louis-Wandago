@@ -37,6 +37,9 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)", "system-ui", "sans-serif"],
         serif: ["var(--font-serif)", "Georgia", "serif"],
+        italiana: ["var(--font-italiana)", "serif"],
+        marck: ["var(--font-marck)", "cursive"],
+        manrope: ["var(--font-manrope)", "sans-serif"],
       },
       typography: () => ({
         DEFAULT: {

@@ -15,7 +15,7 @@ const links = [
 
 export default function Footer() {
   return (
-    <footer className="relative mt-32 border-t border-ink/10 dark:border-paper/10 overflow-hidden">
+    <footer className="relative border-t border-ink/10 dark:border-paper/10 overflow-hidden">
       <div className="pointer-events-none absolute inset-x-0 -top-32 h-64 bg-grid-glow opacity-60" />
       <div className="relative max-w-5xl mx-auto px-6 py-14">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-8">
