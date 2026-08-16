@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Reveal from "@/components/Reveal";
 import { getAllCourses, getCourse, getLesson } from "@/lib/courses";
 
 export function generateStaticParams() {
@@ -40,9 +41,11 @@ export default function LessonPage({ params }) {
         {lesson.title}
       </h1>
 
-      <div className="prose-custom">
-        <MDXRemote source={lesson.content} />
-      </div>
+      <Reveal>
+        <div className="prose-custom">
+          <MDXRemote source={lesson.content} />
+        </div>
+      </Reveal>
 
       <div className="mt-16 flex items-center justify-between border-t border-ink/10 dark:border-paper/10 pt-8">
         {lesson.prev ? (

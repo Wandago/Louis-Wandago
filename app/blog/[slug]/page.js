@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import Reveal from "@/components/Reveal";
 import { getAllPosts, getPostBySlug } from "@/lib/posts";
 
 export function generateStaticParams() {
@@ -43,9 +44,11 @@ export default function BlogPost({ params }) {
       <h1 className="font-serif text-3xl sm:text-4xl font-semibold mt-3 mb-10 leading-tight">
         {post.title}
       </h1>
-      <div className="prose-custom">
-        <MDXRemote source={post.content} />
-      </div>
+      <Reveal>
+        <div className="prose-custom">
+          <MDXRemote source={post.content} />
+        </div>
+      </Reveal>
     </article>
   );
 }
